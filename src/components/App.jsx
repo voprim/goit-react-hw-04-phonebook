@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { nanoid } from "nanoid";
+//import PropTypes from 'prop-types';
 import {Container} from './Container/Container';
 import {ContactForm} from './ContactForm/ContactForm';
 import {Filter} from './Filter/Filter';
@@ -61,7 +62,7 @@ export function App() {
       return (
       <Container>
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={addContact} />
+        <ContactForm addContact={addContact} />
         <h2>Contacts</h2>
         {contacts.length > 1 && (
           <Filter value={filter} onChange={changeFilter} />
